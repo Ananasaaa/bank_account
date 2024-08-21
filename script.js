@@ -1,16 +1,17 @@
 class BankAccount {
+  #balance
   constructor(balance) {
-    this.balance = balance;
+    this.#balance = balance;
   }
   getBalance() {
-    return this.balance;
+    return this.#balance;
   }
     deposit(quantity) {
-      this.balance += quantity;
+      this.#balance += quantity;
     }
     withdraw(quantity) {
-        if(quantity <= this.balance) {
-            this.balance -= quantity;
+        if(quantity <= this.#balance) {
+            this.#balance -= quantity;
         } else {
             return `Insufficient funds`;
         }
